@@ -7,7 +7,8 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = {
-  entry: './src/App.js',
+  entry: './src/app.js',
+  context: path.resolve(__dirname),
   output: {
     path: path.resolve('dist'),
     filename: '[name].[hash:8].js',
@@ -17,12 +18,12 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         use: 'babel-loader'
       },
       {
-        test: /\.scss$/,
+        test:/\.(s*)css$/,
         exclude: /node_modules/,
         use: [ 'style-loader', 'css-loader', 'sass-loader' ]
       }
