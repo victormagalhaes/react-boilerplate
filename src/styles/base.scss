@@ -1,0 +1,12 @@
+$theme-font: Verdana, sans-serif;
+$theme-color-light: #f3e2c7;
+$theme-color-dark: #b68d4c;
+
+body {
+  background-color: $theme-color-light;
+  font: $theme-font;
+
+  h1, h2 {
+    color: $theme-color-dark;
+  }
+}
