@@ -1,5 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from './pages/home/home';
 
-ReactDOM.render(<Home />, document.getElementById('app'));
+import Menu from './components/menu/menu';
+
+const App = () => {
+  return (
+    <div id="main">
+      <Menu />
+    </div>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById('app'));
