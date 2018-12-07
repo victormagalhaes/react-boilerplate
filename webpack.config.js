@@ -2,18 +2,17 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const path = require('path')
 
 const htmlPlugin = new HtmlWebPackPlugin({
-  template: path.resolve(__dirname, 'public'),
+  template: './src/index.html',
   filename: './index.html'
 });
 
 module.exports = {
-  entry: {
-    path: path.resolve(__dirname, 'src'),
-    filename: 'main.js'
-  },
+  entry: './src/App.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js'
+    path: path.resolve('dist'),
+    filename: '[name].[hash:8].js',
+    sourceMapFilename: '[name].[hash:8].map',
+    chunkFilename: '[id].[hash:8].js'
   },
   module: {
     rules: [
@@ -25,17 +24,7 @@ module.exports = {
       {
         test: /\.scss$/,
         exclude: /node_modules/,
-        use: [
-          {
-            loader: "style-loader" // creates style nodes from JS strings
-          },
-          {
-            loader: "css-loader" // translates CSS into CommonJS
-          },
-          {
-            loader: "sass-loader" // compiles Sass to CSS
-          }
-        ]
+        use: [ 'style-loader', 'css-loader', 'sass-loader' ]
       }
     ]
   },
