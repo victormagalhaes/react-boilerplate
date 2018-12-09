@@ -1,8 +1,7 @@
-$color-1: #2d2d2d;
-$color-2: #fff;
+@import "~sass-rem";
+@import "../../styles/colors";
 
 .menu {
-  background-color: $color-1;
-  color: $color-2;
-  font-size: 16px;
+  color: $white-1;
+  font-size: rem(26px);
 }

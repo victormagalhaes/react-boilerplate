@@ -1,4 +1,5 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const path = require('path')
 
 const htmlPlugin = new HtmlWebPackPlugin({
@@ -6,14 +7,15 @@ const htmlPlugin = new HtmlWebPackPlugin({
   filename: './index.html'
 });
 
+const cleanPlugin = new CleanWebpackPlugin(['dist']);
+
 module.exports = {
   entry: './src/app.js',
   context: path.resolve(__dirname),
   output: {
     path: path.resolve('dist'),
-    filename: '[name].[hash:8].js',
-    sourceMapFilename: '[name].[hash:8].map',
-    chunkFilename: '[id].[hash:8].js'
+    filename: '[name].bundle.js',
+    sourceMapFilename: '[name].bundle.map'
   },
   module: {
     rules: [
@@ -29,5 +31,5 @@ module.exports = {
       }
     ]
   },
-  plugins: [htmlPlugin]
+  plugins: [htmlPlugin, cleanPlugin]
 };

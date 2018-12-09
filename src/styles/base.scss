@@ -1,0 +1,9 @@
+@import "reset";
+@import "~normalize-scss";
+@import "~sass-rem";
+@import "colors";
+
+body {
+  background-color: $black-1;
+  font-size: rem(20px);
+}
