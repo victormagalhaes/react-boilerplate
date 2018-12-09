@@ -10,12 +10,13 @@ class Menu extends Component {
   render() {
     return (
       <Router>
-        <div className="menu pure-menu-horizontal">
-          <ul className="pure-menu-list">
-            <li className="menu-item pure-menu-item"><Link to="/">Home</Link></li>
-            <li className="menu-item pure-menu-item"><Link to="/services">Services</Link></li>
-            <li className="menu-item pure-menu-item"><Link to="/about">About us</Link></li>
+        <div className="menu">
+          <ul>
+            <li className="menu-item"><Link to="/">Home</Link></li>
+            <li className="menu-item"><Link to="/services">Services</Link></li>
+            <li className="menu-item"><Link to="/about">About us</Link></li>
           </ul>
+
           <Route exact path="/" component={ Home } />
           <Route path="/services" component={ Services } />
           <Route path="/about" component={ About } />

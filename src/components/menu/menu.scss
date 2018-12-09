@@ -2,6 +2,17 @@
 @import "../../styles/colors";
 
 .menu {
+  background: url("../../images/ninja.jpg") no-repeat center top;
+  background-size: contain;
   color: $white-1;
   font-size: rem(26px);
+
+  ul {
+    display: flex;
+    margin: rem(50px auto);
+
+    li {
+      margin: rem(10px);
+    }
+  }
 }

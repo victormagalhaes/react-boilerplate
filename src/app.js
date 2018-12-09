@@ -4,11 +4,13 @@ import ReactDOM from 'react-dom';
 import './styles/base.scss';
 import Menu from './components/menu/menu';
 
+import img from './images/ninja.jpg';
+
 const App = () => {
   return (
     <div id="main">
       <Menu />
-      <img src="images/ninja.jpg" alt=""/>
+      <img src={ img } alt=""/>
     </div>
   );
 };
