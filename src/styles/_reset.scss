@@ -1,4 +1,4 @@
-/* CSS reset with box-sizing fix */
+// CSS reset with box-sizing fix
 a,
 abbr,
 acronym,
@@ -80,11 +80,11 @@ u,
 ul,
 var,
 video {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
   margin: 0;
   padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 
@@ -104,12 +104,19 @@ section {
 
 html {
   box-sizing: border-box;
+
+  *::after, *::before {
+    box-sizing: border-box;
+    clear: both;
+    content: "";
+    display: table;
+  }
 }
 
 *,
 *::after,
 *::before {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body {

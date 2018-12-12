@@ -10,16 +10,20 @@ class Menu extends Component {
   render() {
     return (
       <Router>
-        <div className="menu">
-          <ul>
-            <li className="menu-item"><Link to="/">Home</Link></li>
-            <li className="menu-item"><Link to="/services">Services</Link></li>
-            <li className="menu-item"><Link to="/about">About us</Link></li>
-          </ul>
+        <div className="router">
+          <div className="menu">
+            <ul className="menu-items">
+              <li className="menu-item"><Link to="/">Home</Link></li>
+              <li className="menu-item"><Link to="/services">Services</Link></li>
+              <li className="menu-item"><Link to="/about">About us</Link></li>
+            </ul>
+          </div>
 
-          <Route exact path="/" component={ Home } />
-          <Route path="/services" component={ Services } />
-          <Route path="/about" component={ About } />
+          <div className="content">
+            <Route exact path="/" component={ Home } />
+            <Route path="/services" component={ Services } />
+            <Route path="/about" component={ About } />
+          </div>
         </div>
       </Router>
     );

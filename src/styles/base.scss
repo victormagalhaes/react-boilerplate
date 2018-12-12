@@ -2,8 +2,36 @@
 @import "~normalize-scss";
 @import "~sass-rem";
 @import "colors";
+@import "breakpoints";
 
 body {
-  background-color: $black-1;
   font-size: rem(20px);
+
+  .main {
+    @include x-small {
+      margin: rem(0 $gutter);
+    }
+
+    @include small {
+      width: rem($bp-small - $gutter);
+    }
+
+    @include medium {
+      width: rem($bp-medium - $gutter);
+    }
+
+    @include large {
+      width: rem($bp-large - $gutter);
+    }
+
+    @include x-large {
+      width: rem($bp-x-large - $gutter);
+    }
+
+    @include xx-large {
+      width: rem($bp-xx-large - $gutter);
+    }
+
+    margin: 0 auto;
+  }
 }

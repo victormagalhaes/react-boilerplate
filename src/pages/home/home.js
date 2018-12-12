@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 
+import placeholderImage from '../../images/ninja.jpg';
+
 class Home extends Component {
 
   render() {
     return (
-      <div><h1>Home</h1></div>
+      <div className="home">
+        <h1>Home</h1>
+        <img className="ninja" src={ placeholderImage } alt="Ninja!"/>
+      </div>
     );
   }
 }

@@ -1,18 +1,17 @@
 @import "~sass-rem";
 @import "../../styles/colors";
+@import "../../styles/breakpoints";
 
 .menu {
-  background: url("../../images/ninja.jpg") no-repeat center top;
-  background-size: contain;
-  color: $white-1;
   font-size: rem(26px);
+  lost-column: 1/2;
+  margin: rem(50px 0);
 
-  ul {
-    display: flex;
-    margin: rem(50px auto);
+  .menu-items {
+    display: block;
 
-    li {
-      margin: rem(10px);
+    .menu-item {
+      lost-column: 1/3;
     }
   }
 }
